@@ -37,7 +37,7 @@ Docker コンテナで公開されているポート番号を取得し、標準�
 ### ユースケース1: 単一コンテナの URL 一覧を表示する
 
 ```bash
-porturl web
+docker-port-scanner web
 ```
 
 出力例:
@@ -51,7 +51,7 @@ http://localhost:8443
 ### ユースケース2: 複数コンテナの URL 一覧をまとめて表示する
 
 ```bash
-porturl web api admin
+docker-port-scanner web api admin
 ```
 
 出力例:
@@ -71,7 +71,7 @@ http://localhost:9000
 ### ユースケース3: 引数なしで起動中の全コンテナを表示する
 
 ```bash
-porturl
+docker-port-scanner
 ```
 
 出力例:
@@ -87,7 +87,7 @@ http://localhost:3000
 ### ユースケース4: ホスト名を変更して表示する
 
 ```bash
-porturl --host 127.0.0.1 web api
+docker-port-scanner --host 127.0.0.1 web api
 ```
 
 出力例:
@@ -122,7 +122,7 @@ http://127.0.0.1:3000
 例:
 
 ```bash
-porturl [<container1> <container2> ...]
+docker-port-scanner [<container1> <container2> ...]
 ```
 
 ### オプション
@@ -312,7 +312,7 @@ http://localhost:3000
 ### コマンド形式
 
 ```bash
-porturl [options] [<container1> <container2> ...]
+docker-port-scanner [options] [<container1> <container2> ...]
 ```
 
 ### オプション一覧
@@ -329,7 +329,7 @@ porturl [options] [<container1> <container2> ...]
 ### 使用例
 
 ```bash
-porturl
+docker-port-scanner
 ```
 
 出力:
@@ -343,7 +343,7 @@ http://localhost:3000
 ```
 
 ```bash
-porturl web
+docker-port-scanner web
 ```
 
 出力:
@@ -354,7 +354,7 @@ http://localhost:8080
 ```
 
 ```bash
-porturl web api
+docker-port-scanner web api
 ```
 
 出力:
@@ -368,7 +368,7 @@ http://localhost:3000
 ```
 
 ```bash
-porturl --host 127.0.0.1 --scheme https
+docker-port-scanner --host 127.0.0.1 --scheme https
 ```
 
 出力:
@@ -460,4 +460,3 @@ https://127.0.0.1:3001
 - HTTPS 自動判定
 - ポート選択オプション
 - 部分成功モード
-

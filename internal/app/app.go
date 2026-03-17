@@ -51,7 +51,7 @@ func parseArgs(args []string, stderr io.Writer) (Config, error) {
 		Scheme: "http",
 	}
 
-	fs := flag.NewFlagSet("porturl", flag.ContinueOnError)
+	fs := flag.NewFlagSet("docker-port-scanner", flag.ContinueOnError)
 	fs.SetOutput(stderr)
 	fs.StringVar(&cfg.Host, "host", cfg.Host, "hostname part of generated URLs")
 	fs.StringVar(&cfg.Scheme, "scheme", cfg.Scheme, "scheme part of generated URLs")
